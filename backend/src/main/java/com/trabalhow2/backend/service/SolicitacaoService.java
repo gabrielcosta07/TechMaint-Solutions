@@ -279,7 +279,7 @@ public class SolicitacaoService {
         return paraOrcamentoResponse(orcamentoSalvo);
     }
 
-    // RF011 - Aprova o orcamento de uma solicitacao pelo cliente
+    // RF006 - Aprova o orcamento de uma solicitacao pelo cliente
     @Transactional
     public SolicitacaoResponse aprovarOrcamento(Long solicitacaoId, Long clienteId) {
         Solicitacao solicitacao = buscarSolicitacaoOrcadaDoCliente(solicitacaoId, clienteId);
@@ -301,7 +301,7 @@ public class SolicitacaoService {
         return paraResponse(solicitacaoSalva);
     }
 
-    // RF012 - Rejeita o orcamento de uma solicitacao pelo cliente
+    // RF007 - Rejeita o orcamento de uma solicitacao pelo cliente
     @Transactional
     public SolicitacaoResponse rejeitarOrcamento(Long solicitacaoId, RejeitarOrcamentoRequest request, Long clienteId) {
         Solicitacao solicitacao = buscarSolicitacaoOrcadaDoCliente(solicitacaoId, clienteId);
